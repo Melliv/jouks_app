@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jouks_app/domain/exercise.dart';
 import 'package:jouks_app/utils/enums/muscle_group.dart';
+import 'package:jouks_app/widgets/exercise/exercise_card.dart';
 
 const TextStyle kTitleTextStyle = TextStyle(
   fontSize: 16.0,
@@ -49,7 +50,7 @@ class _ExercisesState extends State<ExercisesScreen> {
           .map((val) => Exercise.fromJson(val))
           .toList();
       exer.forEach((exercise) {
-        myCards.add(buildCard(exercise));
+        myCards.add(ExerciseCard(exercise: exercise));
         myCardsFlip.add(buildCardSide(exercise));
       });
     });
@@ -102,23 +103,7 @@ class _ExercisesState extends State<ExercisesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        title: Center(
-          child: Wrap(
-            spacing: 9.0,
-            children: [
-              Icon(
-                Icons.style,
-                color: Colors.redAccent[700],
-              ),
-              Text("Exercises", style: kTitleTextStyle),
-            ],
-          ),
-        ),
-      ),
+      backgroundColor: Colors.redAccent,
       body: GestureDetector(
         onDoubleTap: () {
           isFlip = !isFlip;
@@ -160,45 +145,6 @@ class _ExercisesState extends State<ExercisesScreen> {
     });
   }
 
-  Widget buildCard(Exercise exercise) {
-    return Container(
-      padding: EdgeInsets.all(9.0),
-      child: Column(
-        children: <Widget>[
-          Container(
-            child: Text(exercise.title.en,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 24,
-                )),
-          ),
-          Container(
-            height: 280,
-            decoration: BoxDecoration(
-                color: exercise.muscleGroup.getColor(),
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                    image: AssetImage(exercise.getImagePath()),
-                    alignment: Alignment.bottomCenter)),
-          ),
-          SizedBox(height: 12),
-          Container(
-            padding: EdgeInsets.all(8),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                color: exercise.muscleGroup.getColor(),
-                borderRadius: BorderRadius.circular(12)),
-            child: Text(
-              exercise.description.en,
-              style: const TextStyle(color: Colors.white, fontSize: 20),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget buildCardSide(Exercise exercise) {
     return Container(
       padding: EdgeInsets.all(9.0),
@@ -212,10 +158,10 @@ class _ExercisesState extends State<ExercisesScreen> {
                 )),
           ),
           Container(
-            height: 280,
+            height: 260,
             decoration: BoxDecoration(
                 color: exercise.muscleGroup.getColor(),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
                     image: AssetImage(exercise.getSideImagePath()),
                     alignment: Alignment.bottomCenter)),
@@ -227,7 +173,7 @@ class _ExercisesState extends State<ExercisesScreen> {
                 padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   color: exercise.muscleGroup.getColor(),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Text(
                   "Level 3 25x",
