@@ -34,6 +34,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  swipe_cards: ^2.0.0+1
+  fluttertoast: ^8.2.5
+  toggle_switch: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +65,8 @@ flutter:
   fonts:
     - family: Images
       fonts:
+        - asset: assets/images/jouks_logo.png
+
         - asset: assets/images/exercises/squats.png
         - asset: assets/images/exercises/squats_2.png
         - asset: assets/images/exercises/diamond_push-ups.png
