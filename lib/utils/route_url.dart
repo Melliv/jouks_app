@@ -1,5 +1,6 @@
 class RouteUrl {
   static const String MAIN_MENU = "/main_menu";
+  static const String SETTINGS = "/settings";
 
   static const String EXERCISES = "/exercises";
   static const String GAME_PLAYGROUND = "/game/playground";

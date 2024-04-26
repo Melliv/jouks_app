@@ -9,6 +9,7 @@ class PlayerAddSheet extends StatelessWidget {
     createPlayerClicked() {
       showModalBottomSheet(
         context: context,
+        isScrollControlled: true,
         builder: (BuildContext context) {
           return PlayerCreateSheet();
         },
@@ -31,6 +32,9 @@ class PlayerAddSheet extends StatelessWidget {
                     style: Theme.of(context).textTheme.headlineSmall),
                 ElevatedButton(
                   onPressed: createPlayerClicked,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Theme.of(context).primaryColor,
+                  ),
                   child: Text("Create player"),
                 )
               ]),

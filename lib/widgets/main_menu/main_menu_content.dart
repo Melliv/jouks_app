@@ -39,7 +39,12 @@ class _MainMenuContentState extends State<MainMenuContent> {
                         child: Text("Play game v2")),
                     SizedBox(height: 8),
                     ElevatedButton(
-                        onPressed: () => {}, child: Text("How to play"))
+                        onPressed: () => {}, child: Text("How to play")),
+                    SizedBox(height: 8),
+                    ElevatedButton(
+                        onPressed: () =>
+                            {Navigator.pushNamed(context, RouteUrl.SETTINGS)},
+                        child: Text("Settings"))
                   ]),
             )
           ],
