@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:jouks_app/domain/player.dart';
+import 'package:jouks_app/prodivers/player_provider.dart';
 import 'package:jouks_app/utils/enums/gender.dart';
 import 'package:jouks_app/utils/enums/level.dart';
+import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class PlayerCreateSheet extends StatefulWidget {
@@ -26,7 +28,8 @@ class _PlayerCreateSheetState extends State<PlayerCreateSheet> {
           textColor: Colors.black,
           fontSize: 16.0);
     } else {
-      print("player: ${player.name}  ${player.gender}  ${player.level}");
+      Provider.of<PlayerProvider>(context, listen: false).add(player);
+      Navigator.pop(context);
     }
   }
 

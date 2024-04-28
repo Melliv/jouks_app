@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:jouks_app/domain/player.dart';
+import 'package:jouks_app/prodivers/player_provider.dart';
 import 'package:jouks_app/widgets/game/player/player_create_sheet.dart';
+import 'package:jouks_app/widgets/game/player/players_list.dart';
+import 'package:provider/provider.dart';
 
 class PlayerAddSheet extends StatelessWidget {
   const PlayerAddSheet({super.key});
@@ -14,6 +18,10 @@ class PlayerAddSheet extends StatelessWidget {
           return PlayerCreateSheet();
         },
       );
+    }
+
+    playerSelected(Player player) {
+      Navigator.pop(context, player);
     }
 
     return Padding(
@@ -39,9 +47,7 @@ class PlayerAddSheet extends StatelessWidget {
                 )
               ]),
               const SizedBox(height: 16),
-              Column(
-                children: [Text("player1"), Text("Player2")],
-              )
+              PlayersList(playerSelected: playerSelected)
             ],
           ),
         ),

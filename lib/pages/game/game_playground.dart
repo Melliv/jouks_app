@@ -78,11 +78,13 @@ class _GamePlaygroundState extends State<GamePlaygroundScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:
+          AppBar(title: Text("Turn: ${widget.gameOptions.players[0].name}")),
       body: Container(
-          child: Stack(children: [
+          child: Column(children: [
         Container(
-          height: MediaQuery.of(context).size.height - kToolbarHeight,
-          padding: EdgeInsets.symmetric(vertical: 48, horizontal: 16),
+          height: MediaQuery.of(context).size.height - kToolbarHeight - 72,
+          padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           child: SwipeCards(
               matchEngine: _matchEngine!,
               itemBuilder: (BuildContext context, int index) {

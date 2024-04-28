@@ -13,6 +13,8 @@ ElevatedButtonThemeData _elevatedButtonTheme = ElevatedButtonThemeData(
 ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: primaryColor,
+    // scaffoldBackgroundColor: Color(0xFFFEFCEA),
+    // colorScheme: ColorScheme(background: Colors.blue),
     inputDecorationTheme: const InputDecorationTheme(
         labelStyle: TextStyle(color: Colors.black),
         border: OutlineInputBorder(),
