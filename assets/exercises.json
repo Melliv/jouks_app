@@ -2,27 +2,27 @@
   {
     "nr": 1,
     "muscleGroup": "legs",
-    "imageNames": ["squats", "squats_2"],
+    "imageNames": ["calf_raises"],
     "title": {
-      "ee": "Kükid",
-      "en": "Squats"
+      "ee": "Sääre tõsted",
+      "en": "Calf raises"
     },
     "description": {
-      "ee": "Kükki minnes peavad jalad minema 90°",
-      "en": "When squatting, the legs must go 90°"
+      "ee": "Siruta sääred lõpuni välja",
+      "en": "Stretch your legs all the way out"
     }
   },
   {
     "nr": 2,
     "muscleGroup": "upperBody",
-    "imageNames": ["diamond_push-ups", "diamond_push-ups_2"],
+    "imageNames": ["bench_dips"],
     "title": {
-      "ee": "Teemand kätekõverdused",
-      "en": "Diamond Push-ups"
+      "ee": "Tippid pingiga",
+      "en": "Bench dips"
     },
     "description": {
-      "ee": "Käed peavad olema koos",
-      "en": "Hands must be together"
+      "ee": "Käed peavad olema õlgade laiused",
+      "en": "Hands should be shoulder width apart"
     }
   }
 ]

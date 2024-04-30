@@ -17,28 +17,29 @@ class _ExerciseCardState extends State<ExerciseCard> {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16), color: Colors.grey),
-      padding: EdgeInsets.all(9.0),
+      padding: const EdgeInsets.all(9.0),
       child: Column(
         children: <Widget>[
-          Container(
-            child: Text(widget.exercise.title.en,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 24,
-                )),
-          ),
+          Text(widget.exercise.title.en,
+              style: const TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 24,
+              )),
           Container(
             height: 260,
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
                 color: widget.exercise.muscleGroup.getColor(),
-                borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(
-                    image: AssetImage(widget.exercise.getImagePath()),
-                    alignment: Alignment.bottomCenter)),
+                borderRadius: BorderRadius.circular(16)),
+            child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(widget.exercise.getImagePath()),
+                        alignment: Alignment.bottomCenter))),
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 color: widget.exercise.muscleGroup.getColor(),

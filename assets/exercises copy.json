@@ -1,0 +1,28 @@
+[
+  {
+    "nr": 1,
+    "muscleGroup": "legs",
+    "imageNames": ["squats", "squats_2"],
+    "title": {
+      "ee": "Kükid",
+      "en": "Squats"
+    },
+    "description": {
+      "ee": "Kükki minnes peavad jalad minema 90°",
+      "en": "When squatting, the legs must go 90°"
+    }
+  },
+  {
+    "nr": 2,
+    "muscleGroup": "upperBody",
+    "imageNames": ["diamond_push-ups", "diamond_push-ups_2"],
+    "title": {
+      "ee": "Teemand kätekõverdused",
+      "en": "Diamond Push-ups"
+    },
+    "description": {
+      "ee": "Käed peavad olema koos",
+      "en": "Hands must be together"
+    }
+  }
+]
