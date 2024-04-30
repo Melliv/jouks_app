@@ -1,28 +1,30 @@
 [
   {
     "nr": 1,
+    "title": {
+      "ee": "Kükid",
+      "en": "Squats"
+    },
+    "description": {
+      "ee": "Kükki minnes peavad jalad minema 90°",
+      "en": "When squatting, the legs must go 90°"
+    },
     "muscleGroup": "legs",
-    "imageNames": ["calf_raises"],
-    "title": {
-      "ee": "Sääre tõsted",
-      "en": "Calf raises"
-    },
-    "description": {
-      "ee": "Siruta sääred lõpuni välja",
-      "en": "Stretch your legs all the way out"
-    }
-  },
-  {
-    "nr": 2,
-    "muscleGroup": "upperBody",
-    "imageNames": ["bench_dips"],
-    "title": {
-      "ee": "Tippid pingiga",
-      "en": "Bench dips"
-    },
-    "description": {
-      "ee": "Käed peavad olema õlgade laiused",
-      "en": "Hands should be shoulder width apart"
+    "imageNames": ["squat", "squat_2"],
+    "timeRepetition": false,
+    "repetition": {
+      "male": {
+        "low": 20,
+        "normal": 40,
+        "high": 60,
+        "beast": 80
+      },
+      "female": {
+        "low": 15,
+        "normal": 30,
+        "high": 45,
+        "beast": 60
+      }
     }
   }
 ]

@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:jouks_app/domain/exercise.dart';
 import 'package:jouks_app/utils/enums/muscle_group.dart';
+import 'package:jouks_app/widgets/exercise/exercise_image.dart';
 
 class ExerciseCard extends StatefulWidget {
   final Exercise exercise;
@@ -31,11 +34,7 @@ class _ExerciseCardState extends State<ExerciseCard> {
             decoration: BoxDecoration(
                 color: widget.exercise.muscleGroup.getColor(),
                 borderRadius: BorderRadius.circular(16)),
-            child: Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(widget.exercise.getImagePath()),
-                        alignment: Alignment.bottomCenter))),
+            child: ExerciseImage(exercise: widget.exercise),
           ),
           const SizedBox(height: 12),
           Container(
